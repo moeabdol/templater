@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  path: 'some/path'
+  format: 'html'
+  locale: 'en'
+  handler: 'erb'
+  partial: false
+  body: 'body'
+
+users_index:
+  id: 2
+  path: 'users/index'
+  format: 'html'
+  locale: 'en'
+  handler: 'erb'
+  partial: false
+  body: "<p id='notice'><%%= notice %></p><h1>Users</h1><table><thead><tr><th>Name</th><th colspan='3'></th></tr></thead><tbody><%% @users.each do |user| %><tr><td><%%= user.name %></td><td><%%= link_to 'Show', user %></td><td><%%= link_to 'Edit', edit_user_path(user) %></td><td><%%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td></tr><%% end %></tbody></table><br><%%= link_to 'New User', new_user_path %>"
